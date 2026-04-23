@@ -1,0 +1,87 @@
+{
+  "name": "vscode-senbonzakura",
+  "displayName": "Senbonzakura",
+  "description": "Senbonzakura language support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "senbonzakura",
+        "aliases": [
+          "Senbonzakura",
+          "sbz"
+        ],
+        "extensions": [
+          ".sbz"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "semanticTokenScopes": [
+      {
+        "language": "senbonzakura",
+        "scopes": {
+          "keyword": [
+            "keyword.control"
+          ],
+          "string": [
+            "string.quoted"
+          ],
+          "comment": [
+            "comment.line"
+          ],
+          "number": [
+            "constant.numeric"
+          ],
+          "operator": [
+            "keyword.operator"
+          ],
+          "type": [
+            "entity.name.type"
+          ],
+          "function": [
+            "entity.name.function"
+          ],
+          "variable": [
+            "variable.other"
+          ],
+          "parameter": [
+            "variable.parameter"
+          ],
+          "punctuation": [
+            "punctuation"
+          ]
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.116.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  },
+  "dependencies": {
+    "web-tree-sitter": "^0.26.8"
+  }
+}

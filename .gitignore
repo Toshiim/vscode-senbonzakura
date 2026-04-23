@@ -1,0 +1,9 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+
+# Артефакты из монорепо - генерируются через GitHub Actions
+tree-sitter-senbonzakura.wasm
+highlights.scm
