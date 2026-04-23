@@ -6,6 +6,10 @@
   "engines": {
     "vscode": "^1.116.0"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Toshiim/vscode-senbonzakura"
+  },
   "categories": [
     "Programming Languages"
   ],
@@ -81,6 +85,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1"
   },
+  
   "dependencies": {
     "web-tree-sitter": "^0.26.8"
   }
